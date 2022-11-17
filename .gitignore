@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.log
+.idea
+.idea/*
+.vscode
+.vscode/*
+
+venv/
+env/*
+node_modules
+AndroidSdkTool
+casescript
+casescript/*
+log/*
+casescripts/all.py
+.casescript
+config.ini
