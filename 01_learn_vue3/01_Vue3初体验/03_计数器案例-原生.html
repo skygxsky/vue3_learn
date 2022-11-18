@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2 class="counter">0</h2>
+    <button class="increment">+1</button>
+    <button class="decrement">-1</button>
+
+    <script>
+        const counterEl = document.querySelector(".counter")
+        const incrementEl = document.querySelector(".increment")
+        const decrementEl = document.querySelector(".decrement")
+
+        let counter = 100;
+        counterEl.innerHTML = counter;
+
+        incrementEl.addEventListener('click',()=>{
+            counter +=1;
+            counterEl.innerHTML = counter;
+        })
+
+        decrementEl.addEventListener('click',()=>{
+            counter -=1;
+            counterEl.innerHTML = counter;
+        })
+    </script>
+</body>
+</html>
