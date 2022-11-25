@@ -42,6 +42,17 @@
                 }
             }
         }).mount("#app")
+
+        function bar() {
+            console.log(this);
+        }
+
+        const info = {name:'三哥'}
+
+        // 显示绑定
+        const foo = bar.bind(info);
+        foo();
+
     </script>
 </body>
 </html>
