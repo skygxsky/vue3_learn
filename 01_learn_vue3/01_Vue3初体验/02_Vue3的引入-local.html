@@ -5,17 +5,32 @@
     <title>Title</title>
 </head>
 <body>
+<div id="app">
 
-  <div id="app"></div>
+</div>
 
-  <script src="../js/vue.js"></script>
+<template id="my-app">
+    <h2>{{message}}</h2>
 
-  <script>
-    Vue.createApp({
-      template:"<h2>三哥天下第一</h2>"
-    }).mount("#app");
+</template>
 
+<script src="../js/vue.js"></script>
+<script>
+    const App = {
+        template:"#my-app",
+        data(){
+            return{
+                message: 'hello word',
 
-  </script>
+            }
+        },
+        methods:{
+
+        }
+    }
+
+    Vue.createApp(App).mount('#app');
+</script>
+
 </body>
 </html>

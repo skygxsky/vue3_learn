@@ -11,6 +11,14 @@
 
   <template id="my-app">
     <h2>{{message}}</h2>
+      <h2>{{counter * 100}}</h2>
+      <h2>{{message.split("").reverse().join("")}}</h2>
+      <h2>{{getReverseMessage}}</h2>
+
+<!--      可以计算属性computed-->
+<!--      三元目运算符-->
+      <h2>{{isShow ? "三哥无敌":"---"}}</h2>
+      <button @click="toggle">切换</button>
   </template>
 
   <script src="../js/vue.js"></script>
@@ -19,9 +27,19 @@
       template:"#my-app",
       data(){
         return{
-          message: 'hello word'
+          message: 'hello word',
+            counter:100,
+            isShow:true
         }
-      }
+      },
+        methods:{
+          getReverseMessage(){
+              return this.message.split("").reverse().join("");
+          },
+          toggle() {
+              this.isShow = !this.isShow;
+          }
+        }
     }
 
     Vue.createApp(App).mount('#app');
