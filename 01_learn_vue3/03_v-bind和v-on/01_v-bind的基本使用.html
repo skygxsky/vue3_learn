@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+
+</div>
+<!--vu3允许template中有多个根元素-->
+<template id="my-app">
+    <img v-bind:src="imgUrl" alt="">
+    <a v-bind:href="link">百度</a>
+
+<!--    v-bind语法糖-->
+    <img :src="imgUrl" alt="">
+    <a :href="link">百度yixia</a>
+</template>
+
+<script src="../js/vue.js"></script>
+<script>
+    const App = {
+        template:"#my-app",
+        data(){
+            return{
+                imgUrl: '',
+                link:'https://www.baidu.com'
+
+            }
+        },
+        methods:{
+
+        }
+    }
+
+    Vue.createApp(App).mount('#app');
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .active {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+
+</div>
+
+<template id="my-app">
+    <div :class="['abc',title]">hhhhh</div>
+
+    <div :class="['abc',title, isActive ? 'active':'']">hhhhhhh</div>
+
+    <div :class="['abc',title, {active:isActive}]">hhhhhhh</div>
+</template>
+
+<script src="../js/vue.js"></script>
+<script>
+    const App = {
+        template:"#my-app",
+        data(){
+            return{
+                message: 'hello word',
+                title:'cba',
+                isActive:true
+            }
+        },
+        methods:{
+
+        }
+    }
+
+    Vue.createApp(App).mount('#app');
+</script>
+
+
+</body>
+</html>
