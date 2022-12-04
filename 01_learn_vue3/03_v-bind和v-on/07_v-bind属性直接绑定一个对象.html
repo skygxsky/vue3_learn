@@ -3,11 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-        .active {
-            color: red;
-        }
-    </style>
 </head>
 <body>
 <div id="app">
@@ -15,8 +10,9 @@
 </div>
 
 <template id="my-app">
-    <div :style="[style1Obj,style2Obj]">hhh</div>
+    <div v-bind="info">hahaha</div>
 
+    <div :="info">hahaha</div>
 </template>
 
 <script src="../js/vue.js"></script>
@@ -26,12 +22,10 @@
         data(){
             return{
                 message: 'hello word',
-                style1Obj:{
-                    color:'red',
-                    fontSize:'30px'
-                },
-                style2Obj:{
-                    textDecoration:"underline"
+                info:{
+                    name:"why",
+                    age:18,
+                    height:1.88
                 }
 
             }
@@ -43,7 +37,6 @@
 
     Vue.createApp(App).mount('#app');
 </script>
-
 
 </body>
 </html>

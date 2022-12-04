@@ -3,11 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-        .active {
-            color: red;
-        }
-    </style>
 </head>
 <body>
 <div id="app">
@@ -15,8 +10,10 @@
 </div>
 
 <template id="my-app">
-    <div :style="[style1Obj,style2Obj]">hhh</div>
-
+    <div @click="divClick">
+        <button @click="btnClick">按钮</button>
+    </div>
+    <input type="text" @keyup.enter="enterKeyup">
 </template>
 
 <script src="../js/vue.js"></script>
@@ -26,24 +23,24 @@
         data(){
             return{
                 message: 'hello word',
-                style1Obj:{
-                    color:'red',
-                    fontSize:'30px'
-                },
-                style2Obj:{
-                    textDecoration:"underline"
-                }
 
             }
         },
         methods:{
-
+            divClick(){
+                console.log(divClick)
+            },
+            btnClick(){
+                console.log(btnClick)
+            },
+            enterKeyup(event){
+                console.log('enterKeyup',event.target.value)
+            }
         }
     }
 
     Vue.createApp(App).mount('#app');
 </script>
-
 
 </body>
 </html>
