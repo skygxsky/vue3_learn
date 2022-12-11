@@ -1,2 +1,2 @@
 # vue3_learn
-leran vue3 process
+learn vue3 process
