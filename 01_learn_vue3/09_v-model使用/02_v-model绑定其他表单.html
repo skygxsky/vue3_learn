@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+
+</div>
+
+<template id="my-app">
+    <label for="intro">
+        自我介绍
+        <textarea name="intro" id="intro" cols="30" rows="10" v-model="intro"></textarea>
+    </label>
+    <h2 style="color: magenta">{{intro}}</h2>
+
+    <label for="">
+        <input type="checkbox">
+    </label>
+</template>
+
+<script src="../js/vue.js"></script>
+<script>
+    const App = {
+        template:"#my-app",
+        data(){
+            return{
+                intro: 'hello word',
+            }
+        },
+        methods:{
+
+        }
+    }
+
+    Vue.createApp(App).mount('#app');
+</script>
+</body>
+</html>
